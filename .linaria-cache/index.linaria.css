@@ -1,1 +1,8 @@
-.cf71da1{font-size:23px;border:1px solid red;}.cf71da1:hover{border-color:blue;}
+.cf71da1 {
+  width: 375px;
+  font-size: 23px;
+  border: 1px solid yellow;
+}
+.cf71da1:hover {
+  border-color: blue;
+}

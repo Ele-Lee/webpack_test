@@ -693,7 +693,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".cf71da1{font-size:23px;border:1px solid red;}.cf71da1:hover{border-color:blue;}\n", "",{"version":3,"sources":["webpack://./.linaria-cache/index.linaria.css"],"names":[],"mappings":"AAAA,SAAS,cAAc,CAAC,oBAAoB,CAAC,CAAC,eAAe,iBAAiB,CAAC","sourcesContent":[".cf71da1{font-size:23px;border:1px solid red;}.cf71da1:hover{border-color:blue;}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".cf71da1{width:375px;font-size:23px;border:1px solid yellow;}.cf71da1:hover{border-color:blue;}\n", "",{"version":3,"sources":["webpack://./.linaria-cache/index.linaria.css"],"names":[],"mappings":"AAAA,SAAS,WAAW,CAAC,cAAc,CAAC,uBAAuB,CAAC,CAAC,eAAe,iBAAiB,CAAC","sourcesContent":[".cf71da1{width:375px;font-size:23px;border:1px solid yellow;}.cf71da1:hover{border-color:blue;}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -901,7 +901,10 @@ function styled(tag) {
 // CONCATENATED MODULE: ./node_modules/@linaria/react/esm/index.js
 
 // CONCATENATED MODULE: ./index.js
-;
+; // import styled from "style-component";
+// const h = "20px";
+// line-height: ${h};
+
 const Container = /*#__PURE__*/esm_styled("div")({
   name: "Container",
   class: "cf71da1"

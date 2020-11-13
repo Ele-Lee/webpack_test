@@ -26,13 +26,24 @@ module.exports = function (source) {
   // }
   // let catchNode = parser.parse(options.catchCode).program.body;
 
-  console.log("%celelee test:", "background:#000;color:#fff", 1);
   traverse(ast, {
-    AwaitExpression(path) {
-      console.log("%celelee test:", "background:#000;color:#fff", path);
+    TaggedTemplateExpression(path) {
+      const tag = path.node.tag;
+      if (tag.object.name !== "styled") return;
+      const quasis = path.node.quasi.quasis.map((item) => {
+        const newRaw = item.value.raw.replace("red", "yellow");
+        return t.templateElement({ raw: newRaw });
+      });
+
+      const quasi = t.templateLiteral(quasis, path.node.quasi.expressions);
+
+      path.replaceWith(t.taggedTemplateExpression(tag, quasi));
+      path.skip();
     },
   });
 
   // return source;
-  return source;
+  return core.transformFromAstSync(ast, undefined, {
+    configFile: false, // 屏蔽 babel.config.js，否则会注入 polyfill 使得调试变得困难
+  }).code;
 };
